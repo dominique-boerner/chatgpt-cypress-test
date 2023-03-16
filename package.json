@@ -1,0 +1,26 @@
+{
+  "name": "chatgpt-cypress-test",
+  "version": "1.0.0",
+  "description": "This repository tests the abtility of chatGPT to write E2E-Tests with cypress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominique-boerner/chatgpt-cypress-test.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Dominique Börner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dominique-boerner/chatgpt-cypress-test/issues"
+  },
+  "homepage": "https://github.com/dominique-boerner/chatgpt-cypress-test#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
