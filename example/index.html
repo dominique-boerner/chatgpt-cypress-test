@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css"/>
     <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <h1>Todos</h1>
-        <ul class="todo-list">
-            <div class="todo-initial-state">
-                <p>You dont have any todos 🥱</p>
-            </div>
-        </ul>
-        <input class="input-todo" type="text" />
-        <button class="btn-add-todo">Add todo</button>
-    </main>
+<main>
+    <h1>Todos</h1>
+    <ul data-cy="todo-list" class="todo-list">
+        <div data-cy="todo-list-initial" class="todo-initial-state">
+            <p>You dont have any todos 🥱</p>
+        </div>
+    </ul>
+    <input data-cy="todo-input" class="input-todo" type="text"/>
+    <button data-cy="todo-add-button" class="btn-add-todo">Add todo</button>
+</main>
 </body>
 
 </html>

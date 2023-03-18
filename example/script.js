@@ -1,31 +1,40 @@
 const todoListEl = document.querySelector(".todo-list");
 const addTodoBtnEl = document.querySelector(".btn-add-todo");
-const todoInputEl = document.querySelector(".btn-add-todo");
+const todoInputEl = document.querySelector(".input-todo");
 
-todos = [];
-newTodo = "";
-
-const addTodo = (todo) => {
-    todos = [...todos, todo];
-    render();
+const _state = {
+    todos: [],
+    newTodo: ""
 }
 
-const updateNewTodo = (e) => {
-    
-    alert(e)
-    newTodo = e.target.value;
+const handler = {
+    set(obj, prop, value) {
+        obj[prop] = value;
+        render();
+    },
+};
+
+const state = new Proxy(_state, handler);
+
+// This will be called initially.
+(() => {
+    addTodoBtnEl.addEventListener("click", () => addTodo(todoInputEl.value));
+})();
+
+const addTodo = (todo) => {
+    state.todos = [...state.todos, todo];
+    render();
 }
 
 const render = () => {
     todoListEl.innerHTML = "";
-    todos.forEach(todo => {
+    state.todos.forEach(todo => {
         const todoEl = document.createElement("li");
         todoEl.textContent = todo;
         todoListEl.appendChild(todoEl);
     });
+    todoInputEl.value = "";
 }
 
 
 
-addTodoBtnEl.addEventListener("click", () => addTodo(newTodo));
-todoInputEl.addEventListener("input", updateNewTodo);
