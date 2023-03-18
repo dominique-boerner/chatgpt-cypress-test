@@ -1,7 +1,7 @@
-const todoPage = require("../support/selectors/todo-page");
+const todoPage = require("../../../support/selectors/todo-page");
 
-describe('as a user, i want to add a todo', () => {
-  it('add a todo', () => {
+describe("as a user, i want to add a todo", () => {
+  it("add a todo", () => {
     cy.visit("http://localhost:8080");
 
     cy.get(todoPage.todoInput).type("Clean up");
@@ -9,5 +9,5 @@ describe('as a user, i want to add a todo', () => {
 
     cy.get(todoPage.todoListInitialState).should("not.exist");
     cy.get(todoPage.todoList).contains("Clean up");
-  })
-})
+  });
+});
