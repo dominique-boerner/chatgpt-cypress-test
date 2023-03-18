@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
-</head>
+  </head>
 
-<body>
-<main>
-    <h1>Todos</h1>
-    <ul data-cy="todo-list" class="todo-list">
-        <div data-cy="todo-list-initial" class="todo-initial-state">
-            <p>You dont have any todos 🥱</p>
-        </div>
-    </ul>
-    <input data-cy="todo-input" class="input-todo" type="text"/>
-    <button data-cy="todo-add-button" class="btn-add-todo">Add todo</button>
-</main>
-</body>
-
+  <body>
+    <main>
+      <h1>Todos</h1>
+      <div
+        data-cy="todo-list-initial"
+        id="todo-empty-state"
+        class="todo-empty-state"
+      >
+        <img class="todo-empty-state-img" src="no-task.png" alt="no task" />
+        <p>No current todos</p>
+      </div>
+      <ul data-cy="todo-list" id="todo-list"></ul>
+      <input
+        aria-label="todo input"
+        data-cy="todo-input"
+        id="input-todo"
+        type="text"
+      />
+      <button data-cy="todo-add-button" id="btn-add-todo">Add todo</button>
+    </main>
+  </body>
 </html>

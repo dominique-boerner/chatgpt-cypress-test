@@ -12,7 +12,6 @@ body {
     padding: 1rem;
     margin: 0;
     font-size: 18px;
-    text-align: center;
 }
 
 input {
@@ -37,6 +36,15 @@ button:hover {
     opacity: .8;
 }
 
-.todo-initial-state {
-    font-size: 1.4rem;
+.todo-empty-state {
+    font-size: 1.2rem;
+    border: 2px dashed #11111150;
+    padding: 1rem;
+    border-radius: .4rem;
+    color: #111111;
+    text-align: center;
+}
+
+.todo-empty-state-img {
+    width: 100px;
 }
